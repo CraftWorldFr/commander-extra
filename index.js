@@ -49,8 +49,8 @@ function commanderExtra(options) {
     program.parse(process.argv);
 
     if (process.argv.length <= 2) {
-        if (typeof options.outputLogo == 'function') {
-            options.outputLogo();
+        if (typeof options.beforeHelp == 'function') {
+            options.beforeHelp();
         }
 
         program.outputHelp();
