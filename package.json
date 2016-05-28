@@ -1,0 +1,24 @@
+{
+  "name": "commander-extra",
+  "version": "0.1.0",
+  "description": "A wrapper around commander.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CraftWorldFr/commander-extra.git"
+  },
+  "author": "Nathan Boiron <nathan.boiron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CraftWorldFr/commander-extra/issues"
+  },
+  "homepage": "https://github.com/CraftWorldFr/commander-extra",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0",
+    "colors": "^1.1.2"
+  }
+}
