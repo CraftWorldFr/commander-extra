@@ -1,5 +1,7 @@
 # commander-extra
 
+[![NPM Version](http://img.shields.io/npm/v/commander-extra.svg?style=flat)](https://www.npmjs.org/package/commander-extra)
+
 A wrapper around [commander.js](https://www.npmjs.com/package/commander)
 
 This wrapper allows you to use commander with an organized folder structure and some helpers.
