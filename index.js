@@ -7,7 +7,7 @@ var Config = require('./config');
 
 function commanderExtra(options) {
     var program = new Command(options.name || 'cli');
-    require(options.commandsDir)(program);
+    require('./loader')(program, options.commandsDir);
 
     // Initialize cli options
     program
