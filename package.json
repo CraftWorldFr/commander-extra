@@ -1,6 +1,6 @@
 {
   "name": "commander-extra",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A wrapper around commander.js",
   "main": "index.js",
   "scripts": {
