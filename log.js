@@ -20,12 +20,18 @@ module.exports = (function () {
                 message = chalk.red(message);
                 level = 'ERROR';
                 break;
+            case 's':
+                message = chalk.green(message);
+                level = 'SUCCESS';
+                break;
             case 'i':
                 level = 'INFO';
         }
 
         if (level != 'DEBUG' || utils.debugMode) {
             console.log(message);
+        } else {
+            console.log('[' + level + '] ' + message);
         }
     }
 
@@ -41,6 +47,9 @@ module.exports = (function () {
         },
         e: function(message) {
             _log('e', message);
+        },
+        s: function(message) {
+            _log('s', message);
         }
     };
 })();
