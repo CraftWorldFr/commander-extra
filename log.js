@@ -28,9 +28,9 @@ module.exports = (function () {
                 level = 'INFO';
         }
 
-        if (level != 'DEBUG' || utils.debugMode) {
+        if (level != 'DEBUG' || !utils.debugMode) {
             console.log(message);
-        } else {
+        } else if (utils.debugMode) {
             console.log('[' + level + '] ' + message);
         }
     }
