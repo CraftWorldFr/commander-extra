@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var colors = require('colors');
+var chalk = require('chalk');
 var utils = require('./utils');
 
 module.exports = (function () {
@@ -9,15 +9,15 @@ module.exports = (function () {
 
         switch (level) {
             case 'd':
-                message = message.cyan;
+                message = chalk.cyan(message);
                 level = 'DEBUG';
                 break;
             case 'w':
-                message = message.yellow;
+                message = chalk.yellow(message);
                 level = 'WARNING';
                 break;
             case 'e':
-                message = message.red;
+                message = chalk.red(message);
                 level = 'ERROR';
                 break;
             case 'i':

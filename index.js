@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var log = require('./log');
-var colors = require('colors');
+var chalk = require('chalk');
 var Command = require('commander').Command;
 var Config = require('./config');
 
@@ -14,10 +14,6 @@ function commanderExtra(options) {
         .version(options.version || '')
         .usage('<command> [options]')
         .option('-d, --debug', 'show debug info');
-
-    // Turn off colors when non-interactive
-    var colors = require('colors');
-    colors.mode = process.stdout.isTTY ? colors.mode : 'none';
 
     // Setup logging
     program.log = log;
@@ -41,7 +37,7 @@ function commanderExtra(options) {
 
     program.on('*', function() {
         console.log();
-        console.log('  Unknown Command: '.red + program.args.join(' '));
+        console.log(chalk.red('  Unknown Command: ') + program.args.join(' '));
         program.help();
     });
 
